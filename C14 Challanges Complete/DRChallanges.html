@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>C14 Challanges</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="javascript.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div>
+        <h3>CHALLANGE 1</h3>
+        <h4>Tell me the date and time.</h4>
+        <script>
+            function dateTime() {
+                var today = new Date();
+                var d = today.getDay(); // function prints the date in numerical format
+                var days = ["Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday"];
+                document.write("Today is " + days[d] + " "); // finction prints "today is" and the day
+                var hour = today.getHours(); //hours between 0-23.
+                var minute = today.getMinutes(); // minutes between 0-59
+                var second = today.getSeconds(); //seconds between 0-59
+                var time = (hour >= 12) ? " PM " : " AM "; // statement states the time of day 
+                hour = (hour >= 12) ? hour - 12 : hour;
+                if (hour === 0 && time === ' PM ') {
+                    if (minute === 0 && second === 0) {
+                        hour = 12;
+                        time = ' Noon';
+                    } else {
+                        hour = 12;
+                        time = ' PM';
+                    }
+                }
+                if (hour === 0 && time === ' AM ') {
+                    if (minute === 0 && second === 0) {
+                        hour = 12;
+                        time = ' Midnight';
+                    } else {
+                        hour = 12;
+                        time = ' AM';
+                    }
+                }
+                document.write(" and The time " + hour + time + " : " + minute + " : " + second).innerHTML = today;
+
+            }
+            dateTime();
+        </script>
+        <br>
+        <br>
+    </div>
+    <br>
+    <div>
+        <h3>CHALLANGE 2</h3>
+        <script>
+            document.getElementById("web").innerHTML = "The URL is " + document.URL;
+        </script>
+        <P>Get the website address of a page.</P>
+        <p id="web"></p>
+        <button onclick="getWeb()">Click to get URL</button>
+        <br>
+
+        <br>
+    </div>
+    <br>
+    <div>
+        <h3>CHALLANGE 3</h3>
+        <script>
+            document.getElementById("word").innerText = w; {
+                window.alert("This is " + w)
+            }
+        </script>
+        <p>JavaScript program to check if a string starts with 'Java'</p>
+        <h4 id="word"></h4>
+        <button onclick="firstWord()">True or False</button>
+        <br>
+        <br>
+    </div>
+    <br>
+    <div>
+        <h3>CHALLENGE 4</h3>
+        <script>
+            num1 = Number(document.getElementById("x").value);
+            num2 = Number(document.getElementById("y").value);
+            num3 = Number(document.getElementById("z").value);
+
+
+            window.alert(num1 + " is the largest number");
+            window.alert(num2 + " is the largest number");
+            window.alert(num3 + " is the largest number"); // use window.alert for testing purposes and it allows a prompt to test the code
+        </script>
+        <p>Return the Largest of three numbers!</p>
+        <br>
+        <p>1st Number: </p> <input type="text" id="x"></input>
+        <p>2nd Number: </p> <input type="text" id="y"></input>
+        <p>3rd Number: </p> <input type="text" id="z"></input>
+        <br>
+        <br>
+        <button onclick="largest()">Largest?</button>
+        <br>
+
+    </div>
+    <br>
+    <div>
+        <h3>CHALLANGE 5</h3>
+        <p>This operates in a prompt</p>
+        <script>
+            function toCapital() {
+                var c = prompt("Enter a sentence")
+                c = c.split(" ");
+
+                for (var i = 0, x = c.length; i < x; i++) { //Count the length of the string (object methods)
+                    c[i] = c[i][0].toUpperCase() + c[i].substr(1);
+                };
+
+                return c.join(" "); //used to join the elements of an array into a string
+                {
+                    document.write(toCapital()).innerHTML = c;
+                }
+            }
+
+            window.alert(toCapital());
+        </script>
+        <br>
+        <br>
+    </div>
+    <br>
+    <div>
+        <h3>CHALLANGE 6</h3>
+        <p>Challange 6 is a prompt</p>
+
+        <script>
+            x = prompt("Enter a number to convert:");
+
+            function convertNumber(x) {
+
+                let hours = Math.floor(x / 60);
+                let minutes = x % 60;
+                return hours + " hours: " + minutes + " minutes";
+
+            }
+            window.alert(convertNumber(x));
+            /*document.write(convertNumber(x));*/
+        </script>
+        <br>
+        <br>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+div {
+    border: 2.5px solid black;
+    margin: 10px;
+}
+
+body {
+    padding: 1px;
+    margin: 0px;
+    background-color: powderblue;
+}
+
+h3,
+h4,
+p,
+script,
+button,
+input {
+    margin: 15px;
+}
